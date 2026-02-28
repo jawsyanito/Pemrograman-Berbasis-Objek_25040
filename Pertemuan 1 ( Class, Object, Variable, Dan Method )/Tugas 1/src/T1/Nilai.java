@@ -15,7 +15,6 @@ public class Nilai {
     void setNama(String nama){
         namaMahasiswa = nama;
     }
-    
     void setNIM(String inputNIM){
         NIM = inputNIM;
     }
