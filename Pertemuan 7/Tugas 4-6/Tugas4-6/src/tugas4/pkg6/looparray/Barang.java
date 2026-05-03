@@ -16,9 +16,9 @@ public class Barang {
     }
 
     public void infoBarang() {
-        System.out.println("\nKode Barang : " + kode);
+        System.out.println("Kode Barang : " + kode);
         System.out.println("Nama Barang : " + nama);
-        System.out.println("Harga Barang: " + harga);
+        System.out.println("Harga Barang: " + harga + "\n");
     }
     
      public String getKode() {

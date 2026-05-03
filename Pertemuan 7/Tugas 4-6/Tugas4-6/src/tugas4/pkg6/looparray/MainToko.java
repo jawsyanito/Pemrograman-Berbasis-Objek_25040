@@ -1,13 +1,10 @@
 package tugas4.pkg6.looparray;
-
 import java.util.Scanner;
 
 public class MainToko {
 
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
-
         TokoSerbaAda toko = new TokoSerbaAda();
 
         System.out.println("=== KATALOG BARANG ===");
@@ -23,9 +20,7 @@ public class MainToko {
         int[] belanjaJumlah = new int[jumlahItem];
 
         for (int i = 0; i < jumlahItem; i++) {
-
             System.out.println("\nItem ke-" + (i + 1));
-
             System.out.print("Masukkan kode barang : ");
             String kode = input.nextLine();
 
@@ -44,27 +39,42 @@ public class MainToko {
             belanjaJumlah[i] = jumlah;
         }
 
-        System.out.println("\n=== STRUK BELANJA ===");
+        System.out.println("\nTOKO SERBA ADA");
+        System.out.println("======================================================================");
+        System.out.printf(
+            "%-3s %-12s %-15s %-10s %-13s %-15s\n",
+            "No", "Kode Barang", "Nama Barang",
+            "Harga", "Jumlah Beli", "Jumlah Bayar"
+        );
+        System.out.println("======================================================================");
 
         int totalBayar = 0;
+        int no = 1;
 
         for (int i = 0; i < jumlahItem; i++) {
 
             if (belanjaBarang[i] != null) {
 
-                int subtotal = belanjaBarang[i].getHarga() * belanjaJumlah[i];
+                int subtotal =
+                    belanjaBarang[i].getHarga() * belanjaJumlah[i];
 
-                System.out.println(
-                    belanjaBarang[i].getNama() +
-                    " x " + belanjaJumlah[i] +
-                    " = " + subtotal
+                System.out.printf(
+                    "%-3d %-12s %-15s %-10d %-13d %-15d\n",
+                    no,
+                    belanjaBarang[i].getKode(),
+                    belanjaBarang[i].getNama(),
+                    belanjaBarang[i].getHarga(),
+                    belanjaJumlah[i],
+                    subtotal
                 );
 
                 totalBayar += subtotal;
+                no++;
             }
         }
 
-        System.out.println("----------------------");
-        System.out.println("Total Bayar = " + totalBayar);
+        System.out.println("======================================================================");
+        System.out.printf("Total Bayar : %d\n", totalBayar);
+        System.out.println("======================================================================");
     }
 }

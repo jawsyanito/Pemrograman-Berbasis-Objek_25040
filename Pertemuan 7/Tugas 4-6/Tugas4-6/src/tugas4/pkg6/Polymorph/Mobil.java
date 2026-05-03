@@ -12,12 +12,12 @@ public class Mobil extends Kendaraan{
     
     @Override
     public void gerakkan() {
-        System.out.println("Mobil " + merk + " melaju di jalan raya!");
+        System.out.println("Mobil " + merk + " melaju di jalan raya\n");
     }
 
     @Override
     public void infoKendaraan() {
         super.infoKendaraan();
-        System.out.println("Jumlah Pintu : " + jumlahPintu);
+        System.out.println("Jumlah Pintu    : " + jumlahPintu);
     }
 }

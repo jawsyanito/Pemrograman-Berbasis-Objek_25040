@@ -1,6 +1,5 @@
 package tugas4.pkg6.Inputdanpercabangan;
 
-
 import java.util.Scanner;
 
 public class KasirToko {
@@ -11,7 +10,7 @@ public class KasirToko {
         double totalBelanja;
         int pilihan;
         
-        System.out.print("Masukkan nama pelanggan : ");
+        System.out.print("Masukkan nama pelanggan               : ");
         nama = input.nextLine();
 
         System.out.print("Masukkan total belanja sebelum diskon : ");
@@ -74,6 +73,7 @@ public class KasirToko {
         System.out.println("Total Sebelum Diskon  : Rp " + totalBelanja);
         System.out.println("Potongan Diskon       : Rp " + potonganDiskon);
         System.out.println("Total Setelah Diskon  : Rp " + totalSetelahDiskon);
+        System.out.println("---------------------------");
         System.out.println("Metode Pembayaran     : " + metodePembayaran);
 
     }

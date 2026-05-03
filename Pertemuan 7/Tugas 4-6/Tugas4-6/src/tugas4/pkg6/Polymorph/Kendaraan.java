@@ -11,7 +11,7 @@ public abstract class Kendaraan {
     
     public abstract void gerakkan();
     public void infoKendaraan(){
-        System.out.println("Merk   : " + merk);
-        System.out.println("Kecepatan Maks   : " + kecepatanMaksimal);
+        System.out.println("Merk            : " + merk);
+        System.out.println("Kecepatan Maks  : " + kecepatanMaksimal + " km/jam");
     }
 }
